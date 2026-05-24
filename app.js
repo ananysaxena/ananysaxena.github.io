@@ -334,20 +334,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // ==========================================
-  // 5. SATISFYING TACTILE FORM SUBMIT (FormSubmit Integration)
-  // ==========================================
-  const contactForm = document.getElementById('contact-form');
-  const submitBtn = document.getElementById('submit-btn');
-  
-  if (contactForm && submitBtn) {
-    contactForm.addEventListener('submit', () => {
-      // Submits naturally to FormSubmit.co, but we add tactile feedback in the final moments!
-      submitBtn.disabled = true;
-      submitBtn.classList.add('tactile-inset');
-      submitBtn.querySelector('.btn-text').innerText = 'SENDING BRIEF...';
-    });
-  }
 
   // ==========================================
   // 6. SCROLL PARALLAX ACTIVE NAV ELEMENT
