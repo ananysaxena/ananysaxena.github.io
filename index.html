@@ -211,109 +211,30 @@
       </div>
     </section>
 
-    <!-- 4. Experience Timeline -->
+    <!-- 4. Experience & Education Timeline -->
     <section id="experience" class="section-padding">
       <div class="container">
         <div class="section-header">
-          <span class="section-tag">STUDIO HISTORY</span>
-          <h2 class="section-title">Commercial Experience</h2>
+          <span class="section-tag" id="experience-tag">STUDIO HISTORY & EDUCATION</span>
+          <h2 class="section-title" id="experience-title">Professional Experience</h2>
         </div>
         
-        <div class="timeline">
-          
-          <!-- Experience Item 1 -->
-          <div class="timeline-item">
-            <div class="timeline-marker tactile-card">
-              <span class="inner-dot"></span>
-            </div>
-            <div class="timeline-content tactile-card">
-              <div class="timeline-header">
-                <span class="timeline-date">02/2026 – Present</span>
-                <h3 class="timeline-title">3D Designer</h3>
-                <h4 class="timeline-company">Jog Innovations – Dehradun, India (Full-Time)</h4>
-              </div>
-              <ul class="timeline-bullets">
-                <li>Creating lightweight, game-ready 3D assets for real-time web-based configurators (GLB/Three.js) focusing on clean topology.</li>
-                <li>Designing modular asset systems and material setups, enabling seamless real-time customization and configurations.</li>
-                <li>Collaborating with cross-functional development teams to enforce visual benchmarks and web engine efficiency.</li>
-              </ul>
-            </div>
+        <!-- Horizontal Neumorphic Tabs for Experience/Education -->
+        <div class="experience-tabs-wrapper">
+          <div class="experience-tabs-horizontal" id="experience-tabs-horizontal">
+            <button class="tab-btn active" data-exp-tab="professional">
+              <span class="btn-dot"></span>
+              <span class="tab-btn-text">Professional Experience</span>
+            </button>
+            <button class="tab-btn" data-exp-tab="education">
+              <span class="btn-dot"></span>
+              <span class="tab-btn-text">Education & Certifications</span>
+            </button>
           </div>
+        </div>
 
-          <!-- Experience Item 2 -->
-          <div class="timeline-item">
-            <div class="timeline-marker tactile-card">
-              <span class="inner-dot"></span>
-            </div>
-            <div class="timeline-content tactile-card">
-              <div class="timeline-header">
-                <span class="timeline-date">11/2025 – 02/2026</span>
-                <h3 class="timeline-title">3D Designer</h3>
-                <h4 class="timeline-company">Jog Innovations – Remote (Contract)</h4>
-              </div>
-              <ul class="timeline-bullets">
-                <li>Delivered optimized production-ready clothing assets for an interactive web apparel configurator.</li>
-                <li>Established pipeline standards for baking normal maps, efficient UV packaging, and real-time GLB assets.</li>
-              </ul>
-            </div>
-          </div>
-
-          <!-- Experience Item 3 -->
-          <div class="timeline-item">
-            <div class="timeline-marker tactile-card">
-              <span class="inner-dot"></span>
-            </div>
-            <div class="timeline-content tactile-card">
-              <div class="timeline-header">
-                <span class="timeline-date">11/2024 – 03/2025</span>
-                <h3 class="timeline-title">Freelance 3D Artist</h3>
-                <h4 class="timeline-company">Marine Pipeline Project – Remote</h4>
-              </div>
-              <ul class="timeline-bullets">
-                <li>Built massive, accurate industrial environment layouts, offshore rigs, and city architecture visualized in real-time.</li>
-                <li>Modelled and animated industrial and mechanical props with operational precision and clean quad structures.</li>
-                <li>Assembled scenes and handled lighting inside Unreal Engine, assuring tight performance budgets.</li>
-              </ul>
-            </div>
-          </div>
-
-          <!-- Experience Item 4 -->
-          <div class="timeline-item">
-            <div class="timeline-marker tactile-card">
-              <span class="inner-dot"></span>
-            </div>
-            <div class="timeline-content tactile-card">
-              <div class="timeline-header">
-                <span class="timeline-date">07/2024 – 05/2025</span>
-                <h3 class="timeline-title">Freelance 3D Artist</h3>
-                <h4 class="timeline-company">JSW (By Pentasafe) – Remote</h4>
-              </div>
-              <ul class="timeline-bullets">
-                <li>Created highly detailed industrial safety walkthroughs, layout simulations, and timeline animations.</li>
-                <li>Rendered interactive visual guides inside Blender, iClone, and Twinmotion for protocol visualizer tools.</li>
-              </ul>
-            </div>
-          </div>
-
-          <!-- Experience Item 5 -->
-          <div class="timeline-item">
-            <div class="timeline-marker tactile-card">
-              <span class="inner-dot"></span>
-            </div>
-            <div class="timeline-content tactile-card">
-              <div class="timeline-header">
-                <span class="timeline-date">05/2023 – 07/2024</span>
-                <h3 class="timeline-title">3D Generalist</h3>
-                <h4 class="timeline-company">Dave AI – Remote</h4>
-              </div>
-              <ul class="timeline-bullets">
-                <li>Engineered low-poly assets (props, customized vehicles) through a modern PBR workflow in Unity environment.</li>
-                <li>Optimized animations and rigging pipelines between Blender → CC4 → Unity, lowering baking footprint.</li>
-                <li>Learned props-for-gameplay designs, maintaining extreme silhouette details at lower resolution texture maps.</li>
-              </ul>
-            </div>
-          </div>
-          
+        <div class="timeline" id="experience-timeline">
+          <!-- Dynamically populated by app.js from content.json -->
         </div>
       </div>
     </section>
@@ -357,23 +278,23 @@
                   <a href="tel:+919001561133" class="node-val" id="contact-phone">+91 - 9001561133</a>
                 </div>
               </div>
+
+              <div class="contact-node">
+                <div class="node-icon tactile-card">
+                  <svg viewBox="0 0 24 24" width="18" height="18" stroke="var(--primary)" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                    <rect x="2" y="9" width="4" height="12"></rect>
+                    <circle cx="4" cy="4" r="2"></circle>
+                  </svg>
+                </div>
+                <div class="node-text">
+                  <span class="node-lbl">LinkedIn Profile</span>
+                  <a href="https://www.linkedin.com/in/ananysaxena12" target="_blank" rel="noopener" class="node-val" id="contact-linkedin">linkedin.com/in/ananysaxena12</a>
+                </div>
+              </div>
             </div>
 
-            <!-- Resume Download Block relocated from Hero -->
-            <div class="resume-download-block tactile-inset">
-              <div class="resume-download-header">
-                <svg viewBox="0 0 24 24" width="22" height="22" stroke="var(--primary)" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
-                  <polyline points="7 10 12 15 17 10"></polyline>
-                  <line x1="12" y1="15" x2="12" y2="3"></line>
-                </svg>
-                <h4 id="contact-resume-title">Download Resume</h4>
-              </div>
-              <p id="contact-resume-desc">Access Anany Saxena's commercial background and specialized design suite certifications.</p>
-              <a href="assets/Anany_Saxena_Resume.pdf" download="Anany_Saxena_Resume.pdf" class="tactile-btn pill-btn primary-gradient small-btn">
-                Download Resume (PDF)
-              </a>
-            </div>
+            <!-- Removed Download Resume box as requested -->
           </div>
         </div>
       </div>

@@ -102,8 +102,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const contactDesc = document.getElementById('contact-desc');
       const contactEmail = document.getElementById('contact-email');
       const contactPhone = document.getElementById('contact-phone');
-      const contactResumeTitle = document.getElementById('contact-resume-title');
-      const contactResumeDesc = document.getElementById('contact-resume-desc');
+      const contactLinkedin = document.getElementById('contact-linkedin');
       
       if (contactTag) contactTag.innerText = content.contact.sectionTag;
       if (contactTitle) contactTitle.innerText = content.contact.sectionTitle;
@@ -117,9 +116,62 @@ document.addEventListener('DOMContentLoaded', () => {
         contactPhone.innerText = content.contact.phone;
         contactPhone.setAttribute('href', `tel:${content.contact.phone.replace(/[\s-]/g, '')}`);
       }
-      if (contactResumeTitle) contactResumeTitle.innerText = content.contact.resume.title;
-      if (contactResumeDesc) contactResumeDesc.innerText = content.contact.resume.description;
+      if (contactLinkedin && content.contact.linkedin) {
+        contactLinkedin.innerText = content.contact.linkedin.replace(/^https?:\/\/(www\.)?/, '');
+        contactLinkedin.setAttribute('href', content.contact.linkedin);
+      }
       
+      // Inject Experience & Education dynamic timeline
+      const experienceTag = document.getElementById('experience-tag');
+      const experienceTitle = document.getElementById('experience-title');
+      if (experienceTag) experienceTag.innerText = content.experienceSection.sectionTag;
+      if (experienceTitle) experienceTitle.innerText = content.experienceSection.sectionTitle;
+
+      function renderExperienceTimeline(tabKey) {
+        const timelineContainer = document.getElementById('experience-timeline');
+        if (!timelineContainer) return;
+        timelineContainer.innerHTML = '';
+        
+        const items = content.experienceSection.tabs[tabKey].items;
+        items.forEach(item => {
+          const timelineItem = document.createElement('div');
+          timelineItem.className = 'timeline-item';
+          
+          const bulletsHtml = item.bullets.map(bullet => `<li>${bullet}</li>`).join('');
+          
+          timelineItem.innerHTML = `
+            <div class="timeline-marker tactile-card">
+              <span class="inner-dot"></span>
+            </div>
+            <div class="timeline-content tactile-card">
+              <div class="timeline-header">
+                <span class="timeline-date">${item.date}</span>
+                <h3 class="timeline-title">${item.title}</h3>
+                <h4 class="timeline-company">${item.company}</h4>
+              </div>
+              <ul class="timeline-bullets">
+                ${bulletsHtml}
+              </ul>
+            </div>
+          `;
+          timelineContainer.appendChild(timelineItem);
+        });
+      }
+
+      // Initial render of Professional Experience
+      renderExperienceTimeline('professional');
+
+      // Setup Experience horizontal tab listeners
+      const expTabButtons = document.querySelectorAll('#experience-tabs-horizontal .tab-btn');
+      expTabButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+          const targetTab = btn.getAttribute('data-exp-tab');
+          expTabButtons.forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+          renderExperienceTimeline(targetTab);
+        });
+      });
+
       // Setup dynamic tab button listeners once layout is active
       setupTabListeners();
       
@@ -141,7 +193,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   function setupTabListeners() {
-    const tabButtons = document.querySelectorAll('.tab-btn');
+    const tabButtons = document.querySelectorAll('#skills-tabs-vertical .tab-btn');
     const tabContents = document.querySelectorAll('.tab-content');
     
     tabButtons.forEach(btn => {

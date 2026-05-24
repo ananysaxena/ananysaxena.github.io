@@ -63,16 +63,142 @@
       }
     }
   },
+  "experienceSection": {
+    "sectionTag": "STUDIO HISTORY & EDUCATION",
+    "sectionTitle": "Professional Experience",
+    "tabs": {
+      "professional": {
+        "title": "Professional Experience",
+        "items": [
+          {
+            "date": "02/2026 – Present",
+            "title": "3D Designer",
+            "company": "Jog Innovations – Dehradun, India (Full-Time)",
+            "bullets": [
+              "Creating lightweight, game-ready 3D assets for real-time web-based configurators (GLB/Three.js) focusing on clean topology.",
+              "Designing modular asset systems and material setups, enabling seamless real-time customization and configurations.",
+              "Collaborating with cross-functional development teams to enforce visual benchmarks and web engine efficiency.",
+              "Transitioned from freelance to full-time role based on consistent delivery and production reliability."
+            ]
+          },
+          {
+            "date": "11/2025 – 02/2026",
+            "title": "3D Designer",
+            "company": "Jog Innovations – Remote (Contract)",
+            "bullets": [
+              "Delivered optimized production-ready clothing assets for an interactive web apparel configurator.",
+              "Established asset pipeline workflows, including modelling, UV mapping, texturing, and export for real-time applications.",
+              "Defined visual quality benchmarks and optimisation standards for scalable asset production."
+            ]
+          },
+          {
+            "date": "11/2024 – 03/2025",
+            "title": "Freelance 3D Artist",
+            "company": "Marine Pipeline Project – Remote",
+            "bullets": [
+              "Built massive, accurate industrial environment layouts, offshore rigs, and city architecture visualized in real-time.",
+              "Modelled and animated industrial and mechanical props with operational precision and clean quad structures.",
+              "Assembled scenes and handled lighting inside Unreal Engine, assuring tight performance budgets.",
+              "Contributed to real-time visualisation workflows for industrial simulations."
+            ]
+          },
+          {
+            "date": "07/2024 – 05/2025",
+            "title": "Freelance 3D Artist",
+            "company": "JSW (By Pentasafe) – Remote",
+            "bullets": [
+              "Created highly detailed industrial safety walkthroughs, layout simulations, and timeline animations.",
+              "Rendered interactive visual guides inside Blender, iClone, and Twinmotion for protocol visualizer tools.",
+              "Executed character animation, scene layout, lighting, and rendering for production outputs."
+            ]
+          },
+          {
+            "date": "11/2024 – 03/2025",
+            "title": "Freelance 3D Artist",
+            "company": "Kamics Technologies – Remote",
+            "bullets": [
+              "Created architectural and industrial environment assets, including factory elevations.",
+              "Handled end-to-end asset development: modelling, UV mapping, texturing, lighting, and rendering.",
+              "Produced animated walkthroughs with attention to scale, composition, and realism."
+            ]
+          },
+          {
+            "date": "05/2023 – 07/2024",
+            "title": "3D Generalist",
+            "company": "Dave AI – Remote",
+            "bullets": [
+              "Engineered low-poly assets (props, customized vehicles) through a modern PBR workflow in Unity environment (Including Internship Experience from May 2023 to August 2023).",
+              "Optimized animations and rigging pipelines between Blender → CC4 → Unity, lowering baking footprint.",
+              "Used Marmoset Toolbag & Substance Designer for baking, material creation, and look development.",
+              "Improved asset workflows from Blender → CC4 → Engine, ensuring performance and visual quality.",
+              "Learned props-for-gameplay designs, maintaining extreme silhouette details at lower resolution texture maps."
+            ]
+          },
+          {
+            "date": "11/2022 – 03/2023",
+            "title": "3D Generalist",
+            "company": "Immersive Technologies – Jaipur, India",
+            "bullets": [
+              "Created game and marketing assets for real-time and cinematic applications.",
+              "Worked across modelling, texturing, animation, and FX using Blender, Maya, and Unity.",
+              "Built previsualisation scenes using proxy meshes for rapid concept validation.",
+              "Improved asset quality through topology optimisation and efficient texturing workflows."
+            ]
+          }
+        ]
+      },
+      "education": {
+        "title": "Education & Certifications",
+        "items": [
+          {
+            "date": "Certification",
+            "title": "CGMA – Props for Gameplay",
+            "company": "Computer Graphics Master Academy",
+            "bullets": [
+              "Learned to design and create optimized, game-ready props with strong silhouette, function, and storytelling for real-time game engines.",
+              "Gained hands-on experience in UV unwrapping, baking, and texture painting using industry-standard tools like Maya, Substance Painter, and Marmoset Toolbag."
+            ]
+          },
+          {
+            "date": "Certification",
+            "title": "Udemy – 3D Video Game Environment Art Bootcamp",
+            "company": "Online Professional Course",
+            "bullets": [
+              "Built immersive game environments using strong blockouts, composition, and lighting techniques in Unreal Engine 5, leveraging Lumen for real-time rendering.",
+              "Created high-quality props using photogrammetry and Zbrush, and enhanced scene presentation with decals and portfolio-ready workflows."
+            ]
+          },
+          {
+            "date": "Bachelor's Project",
+            "title": "Renegade – Comprehensive / Degree Project",
+            "company": "Academic Games Initiative",
+            "bullets": [
+              "Learned Script Writing and Direction for Games.",
+              "Created Game props and interior environment for the project.",
+              "Learned the animation.",
+              "Created multiple assets while learning UDIM workflows used in games for detailed texturing at low resolution."
+            ]
+          },
+          {
+            "date": "2021 – 2024",
+            "title": "Bachelor of Science – Animation and Multimedia",
+            "company": "Birla Institute of Technology, Mesra (Jaipur Off-Campus)",
+            "bullets": [
+              "GPA: 8.930 CGPA",
+              "Volunteer: TechVibes Fest.",
+              "Creative 3D designer for TechVibes stage."
+            ]
+          }
+        ]
+      }
+    }
+  },
   "contact": {
     "sectionTag": "COLLABORATION",
     "sectionTitle": "Let's Build Something Beautiful",
     "cardSubtitle": "Direct Channels",
     "description": "Have an upcoming game pipeline, architectural lookdev project, web configurator setup, or general freelance assignment? Let's connect and review details.",
     "email": "saxena12anany@outlook.com",
-    "phone": "+91 - 9001561133",
-    "resume": {
-      "title": "Download Resume",
-      "description": "Access Anany Saxena's commercial background and specialized design suite certifications."
-    }
+    "phone": "+91 - 9001561133"
   }
 }
