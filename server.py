@@ -21,6 +21,10 @@ class AutoSyncHTTPRequestHandler(http.server.SimpleHTTPRequestHandler):
                 print(f"[Auto-Sync Dev Server] Error running sync: {e}")
             print("=" * 60 + "\n")
             
+        # Local Host override: Serve portfolio.html instead of index.html for index requests!
+        if self.path == "/" or self.path == "/index.html":
+            self.path = "/portfolio.html"
+            
         return super().do_GET()
 
 if __name__ == "__main__":
