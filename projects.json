@@ -1,0 +1,49 @@
+[
+  {
+    "id": "Lighter_test",
+    "title": "Lighter - Prop",
+    "category": "Props",
+    "tools": [
+      "Blender"
+    ],
+    "description": "A high-fidelity interior design rendering showcasing photorealistic lighting, custom materials, and detailed asset placement. Created as part of freelance 3D visualization contracts.",
+    "demoUrl": "https://drive.google.com/file/d/1FtIFfOGeBTM0gDz9WLrN4D6fTmkMg2Mm/view?usp=sharing",
+    "thumbnail": "projects/Lighter_test/thumbnail.webp",
+    "model": null,
+    "mview": null,
+    "mviewHtml": null,
+    "slides": {}
+  },
+  {
+    "id": "interior-design",
+    "title": "Architecture Visualisation - Interior Design",
+    "category": "Architectural Visualisation",
+    "tools": [
+      "Blender",
+      "DaVinci Resolve"
+    ],
+    "description": "A high-fidelity interior design rendering showcasing photorealistic lighting, custom materials, and detailed asset placement. Created as part of freelance 3D visualization contracts.",
+    "demoUrl": "https://drive.google.com/file/d/1FtIFfOGeBTM0gDz9WLrN4D6fTmkMg2Mm/view?usp=sharing",
+    "thumbnail": "projects/interior-design/thumbnail.jpg",
+    "model": null,
+    "mview": null,
+    "mviewHtml": null,
+    "slides": {}
+  },
+  {
+    "id": "site-restoration",
+    "title": "Architecture Visualisation - Site Restoration",
+    "category": "Architectural Visualisation",
+    "tools": [
+      "Blender",
+      "Twinmotion"
+    ],
+    "description": "Large-scale environment asset modeling and scene assembly representing industrial safety and architectural protocol visualizations. Optimized for real-time rendering pipelines.",
+    "demoUrl": "https://drive.google.com/file/d/1FtIFfOGeBTM0gDz9WLrN4D6fTmkMg2Mm/view?usp=sharing",
+    "thumbnail": "projects/site-restoration/thumbnail.jpg",
+    "model": null,
+    "mview": null,
+    "mviewHtml": null,
+    "slides": {}
+  }
+]

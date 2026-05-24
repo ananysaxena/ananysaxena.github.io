@@ -1,0 +1,13 @@
+HERO 3D MODEL SLOT
+===================
+
+To showcase your own 3D product or model as the central interactive masterpiece (similar to the DogStudio wolf):
+
+1. Export your 3D artwork from Blender, Maya, or ZBrush as a .GLB file (make sure materials and textures are embedded).
+2. Rename your exported file to "model.glb" (all lowercase).
+3. Place "model.glb" in this directory:
+   d:\Antigravity Projects\hero-model\model.glb
+
+The website's WebGL canvas will automatically detect it, load it in real-time, apply gallery-quality lighting, and bind it to your page scroll and cursor movement!
+
+If this folder is empty, the website will seamlessly fallback to your organic morphing particle DNA sphere.
