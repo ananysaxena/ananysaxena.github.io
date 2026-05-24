@@ -243,9 +243,8 @@ html.light #main-header {
   box-shadow: var(--shadow-inset);
   background: var(--card-bg);
 }
-
 .mobile-menu-btn {
-  display: none;
+  display: none !important;
 }
 
 .nav-link {
@@ -1615,7 +1614,7 @@ html.dark .moon-icon {
   }
 
   .mobile-menu-btn {
-    display: flex;
+    display: flex !important;
     flex-direction: column;
     align-items: center;
     justify-content: center;
