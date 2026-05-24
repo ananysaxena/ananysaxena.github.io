@@ -359,4 +359,35 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   });
+
+  // ==========================================
+  // 5. MOBILE HAMBURGER MENU DRAWER CONTROLLER
+  // ==========================================
+  const menuToggle = document.getElementById('menu-toggle');
+  const navbar = document.getElementById('navbar');
+  
+  if (menuToggle && navbar) {
+    menuToggle.addEventListener('click', (e) => {
+      e.stopPropagation();
+      menuToggle.classList.toggle('open');
+      navbar.classList.toggle('open');
+    });
+    
+    // Close menu when clicking any nav link
+    const navLinks = navbar.querySelectorAll('.nav-link');
+    navLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        menuToggle.classList.remove('open');
+        navbar.classList.remove('open');
+      });
+    });
+    
+    // Close menu when clicking outside
+    document.addEventListener('click', (e) => {
+      if (!navbar.contains(e.target) && !menuToggle.contains(e.target)) {
+        menuToggle.classList.remove('open');
+        navbar.classList.remove('open');
+      }
+    });
+  }
 });
