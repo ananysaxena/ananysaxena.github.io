@@ -47,22 +47,26 @@
         <a href="#contact" class="nav-link">Contact</a>
       </nav>
       
-      <!-- Tactile Neumorphic Theme Toggle -->
-      <button id="theme-toggle" class="tactile-btn circle-btn" aria-label="Toggle Light/Dark Theme">
-        <svg class="sun-icon" viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
-          <circle cx="12" cy="12" r="5"></circle>
-          <line x1="12" y1="1" x2="12" y2="3"></line>
-          <line x1="12" y1="21" x2="12" y2="23"></line>
-          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-          <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-          <line x1="1" y1="12" x2="3" y2="12"></line>
-          <line x1="21" y1="12" x2="23" y2="12"></line>
-          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-          <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-        </svg>
-        <svg class="moon-icon" viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-        </svg>
+      <!-- Tactile Neumorphic sliding theme toggle switch -->
+      <button id="theme-toggle" class="tactile-switch" aria-label="Toggle Light/Dark Theme">
+        <span class="switch-track">
+          <span class="switch-thumb">
+            <svg class="sun-icon" viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="5"></circle>
+              <line x1="12" y1="1" x2="12" y2="3"></line>
+              <line x1="12" y1="21" x2="12" y2="23"></line>
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+              <line x1="1" y1="12" x2="3" y2="12"></line>
+              <line x1="21" y1="12" x2="23" y2="12"></line>
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+            </svg>
+            <svg class="moon-icon" viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+            </svg>
+          </span>
+        </span>
       </button>
 
       <!-- Hamburger Menu Button (Mobile) -->
@@ -82,12 +86,25 @@
       <div class="container hero-layout-centered">
         <div class="hero-content-centered">
           <h1 class="hero-title-giant">
-            <span class="giant-sub">HI, I AM</span>
-            <span class="giant-main gradient-text">ANANY SAXENA</span>
+            <span class="giant-sub" id="hero-greeting">HI I AM</span>
+            <span class="giant-main gradient-text" id="hero-name">ANANY SAXENA</span>
           </h1>
-          <p class="hero-description-centered">
-            I'm a passionate 3D Generalist focused on game-ready topology, lookdev, and cinematic lighting. Skilled in high/low poly modeling, rigging, texturing, UV efficiency, and game environment art.
-          </p>
+          <div class="hero-intro-card tactile-card">
+            <p class="hero-description-centered" id="hero-desc">
+              I'm a passionate 3D Generalist focused on game-ready topology, lookdev, and cinematic lighting. Skilled in high/low poly modeling, rigging, texturing, UV efficiency, and game environment art.
+            </p>
+          </div>
+          
+          <div class="hero-cta-wrapper">
+            <a href="assets/Anany_Saxena_Resume.pdf" download="Anany_Saxena_Resume.pdf" class="tactile-btn pill-btn primary-gradient hero-resume-btn">
+              <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round" class="btn-icon">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                <polyline points="7 10 12 15 17 10"></polyline>
+                <line x1="12" y1="15" x2="12" y2="3"></line>
+              </svg>
+              <span>Download Resume</span>
+            </a>
+          </div>
         </div>
       </div>
     </section>
@@ -96,19 +113,21 @@
     <section id="about" class="section-padding">
       <div class="container">
         <div class="section-header">
-          <span class="section-tag">ARTISTIC MIND</span>
-          <h2 class="section-title">About & Creative Core</h2>
+          <span class="section-tag" id="about-tag">ARTISTIC MIND</span>
+          <h2 class="section-title" id="about-title">About & Creative Core</h2>
         </div>
         
         <div class="about-grid">
           <div class="about-text-card tactile-card">
-            <h3 class="card-subtitle">Creative Perspective</h3>
-            <p>
-              My passion lies in crafting highly detailed props, stylized and realistic characters, and immersive architectural spaces. I approach every mesh with a strong sense of composition, color theory, and visual storytelling—ensuring that every digital sculpt carries organic depth and emotional weight.
-            </p>
-            <p>
-              Bridging professional DCC suites (Blender, ZBrush, Maya) with industry-leading lookdev toolkits, I focus on delivering clean topology, optimal UV mapping, and high-fidelity PBR texturing. With over 3 years of 3D modeling and lighting exploration (including 1.8+ years of dedicated studio experience), I strive to create assets that are as technically efficient as they are visually arresting.
-            </p>
+            <h3 class="card-subtitle" id="about-subtitle">Creative Perspective</h3>
+            <div id="about-paragraphs">
+              <p>
+                My passion lies in crafting highly detailed props, stylized and realistic characters, and immersive architectural spaces. I approach every mesh with a strong sense of composition, color theory, and visual storytelling—ensuring that every digital sculpt carries organic depth and emotional weight.
+              </p>
+              <p>
+                Bridging professional DCC suites (Blender, ZBrush, Maya) with industry-leading lookdev toolkits, I focus on delivering clean topology, optimal UV mapping, and high-fidelity PBR texturing. With over 3 years of 3D modeling and lighting exploration (including 1.8+ years of dedicated studio experience), I strive to create assets that are as technically efficient as they are visually arresting.
+              </p>
+            </div>
             
             <div class="demoreel-callout tactile-inset">
               <div class="callout-header">
@@ -116,10 +135,10 @@
                   <polygon points="23 7 16 12 23 17 23 7"></polygon>
                   <rect x="1" y="5" width="15" height="14" rx="2" ry="2"></rect>
                 </svg>
-                <h4>Interactive Showreel</h4>
+                <h4 id="showreel-title">Interactive Showreel</h4>
               </div>
-              <p>Experience my animations, industrial walkthroughs, and rendering configurations in motion.</p>
-              <a href="https://drive.google.com/file/d/1FtIFfOGeBTM0gDz9WLrN4D6fTmkMg2Mm/view?usp=sharing" target="_blank" rel="noopener" class="tactile-btn pill-btn primary-gradient small-btn">
+              <p id="showreel-desc">Experience my animations, industrial walkthroughs, and rendering configurations in motion.</p>
+              <a href="https://drive.google.com/file/d/1FtIFfOGeBTM0gDz9WLrN4D6fTmkMg2Mm/view?usp=sharing" target="_blank" rel="noopener" class="tactile-btn pill-btn primary-gradient small-btn" id="showreel-url">
                 Watch Demo Reel
               </a>
             </div>
@@ -127,53 +146,45 @@
           
           <!-- Skills Interactive Tabbed Layout -->
           <div class="skills-tab-card tactile-card">
-            <h3 class="card-subtitle">Artistic Toolkit</h3>
+            <h3 class="card-subtitle" id="skills-title">Artistic Toolkit</h3>
             
-            <!-- Dynamic Tab Controls -->
-            <div class="skills-tabs">
-              <button class="tab-btn active" data-tab="technical">Technical Art</button>
-              <button class="tab-btn" data-tab="creative">Creative Art</button>
-              <button class="tab-btn" data-tab="tools">Design Suites</button>
-            </div>
-            
-            <!-- Tab Panels -->
-            <div class="tab-content active" id="tab-technical">
-              <div class="skills-grid">
-                <div class="skill-pill tactile-inset"><span class="bullet"></span>High & Low Poly Modeling</div>
-                <div class="skill-pill tactile-inset"><span class="bullet"></span>Digital Sculpting (ZBrush, Blender)</div>
-                <div class="skill-pill tactile-inset"><span class="bullet"></span>Rigging & Skinning</div>
-                <div class="skill-pill tactile-inset"><span class="bullet"></span>UV Mapping & Efficient Unwrapping</div>
-                <div class="skill-pill tactile-inset"><span class="bullet"></span>PBR & Hand-Painted Texturing</div>
-                <div class="skill-pill tactile-inset"><span class="bullet"></span>Retopology & Normal Map Baking</div>
-                <div class="skill-pill tactile-inset"><span class="bullet"></span>Real-time Web 3D (Three.js/GLB)</div>
-                <div class="skill-pill tactile-inset"><span class="bullet"></span>Photogrammetry & Asset Scan Cleanups</div>
-                <div class="skill-pill tactile-inset"><span class="bullet"></span>Basic Shader & Lookdev Setup</div>
+            <div class="skills-split-layout">
+              <!-- Dynamic Tab Controls (Vertical Neumorphic Column) -->
+              <div class="skills-tabs-vertical" id="skills-tabs-vertical">
+                <button class="tab-btn active" data-tab="technical">
+                  <span class="btn-dot"></span>
+                  <span class="tab-btn-text" id="tab-label-technical">Technical Skills</span>
+                </button>
+                <button class="tab-btn" data-tab="creative">
+                  <span class="btn-dot"></span>
+                  <span class="tab-btn-text" id="tab-label-creative">Fundamental Skills</span>
+                </button>
+                <button class="tab-btn" data-tab="tools">
+                  <span class="btn-dot"></span>
+                  <span class="tab-btn-text" id="tab-label-tools">DCC Software</span>
+                </button>
               </div>
-            </div>
-            
-            <div class="tab-content" id="tab-creative">
-              <div class="skills-grid">
-                <div class="skill-pill tactile-inset"><span class="bullet"></span>Composition & Cinematic Scene Design</div>
-                <div class="skill-pill tactile-inset"><span class="bullet"></span>Stylized & Photorealistic Art Styles</div>
-                <div class="skill-pill tactile-inset"><span class="bullet"></span>Color Harmonies & Lighting Theory</div>
-                <div class="skill-pill tactile-inset"><span class="bullet"></span>Detailed Prop Design & Storytelling</div>
-                <div class="skill-pill tactile-inset"><span class="bullet"></span>Industrial & Environmental Art</div>
-                <div class="skill-pill tactile-inset"><span class="bullet"></span>Concept Visualisation</div>
-              </div>
-            </div>
-            
-            <div class="tab-content" id="tab-tools">
-              <div class="skills-grid">
-                <div class="skill-pill tactile-inset"><span class="bullet"></span>Blender (Core Modeling & Rendering)</div>
-                <div class="skill-pill tactile-inset"><span class="bullet"></span>ZBrush (High-Res Sculpting)</div>
-                <div class="skill-pill tactile-inset"><span class="bullet"></span>Maya (Industry Standard Pipelines)</div>
-                <div class="skill-pill tactile-inset"><span class="bullet"></span>Substance Painter (Detailed Texturing)</div>
-                <div class="skill-pill tactile-inset"><span class="bullet"></span>Substance Designer (Material Creation)</div>
-                <div class="skill-pill tactile-inset"><span class="bullet"></span>Marmoset Toolbag (Lookdev & Baking)</div>
-                <div class="skill-pill tactile-inset"><span class="bullet"></span>Unreal Engine 5 (Real-time Environments)</div>
-                <div class="skill-pill tactile-inset"><span class="bullet"></span>Unity (PBR Game Pipeline Integration)</div>
-                <div class="skill-pill tactile-inset"><span class="bullet"></span>Twinmotion & Twinmotion / CC4</div>
-                <div class="skill-pill tactile-inset"><span class="bullet"></span>DaVinci Resolve (Color Grading & Editing)</div>
+              
+              <!-- Tab Panels Container -->
+              <div class="skills-tab-content-panel">
+                <!-- Tab Panels (Dynamically loaded by app.js from content.json) -->
+                <div class="tab-content active" id="tab-technical">
+                  <div class="skills-grid" id="grid-technical">
+                    <!-- Injected dynamically -->
+                  </div>
+                </div>
+                
+                <div class="tab-content" id="tab-creative">
+                  <div class="skills-grid" id="grid-creative">
+                    <!-- Injected dynamically -->
+                  </div>
+                </div>
+                
+                <div class="tab-content" id="tab-tools">
+                  <div class="skills-grid" id="grid-tools">
+                    <!-- Injected dynamically -->
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -311,15 +322,15 @@
     <section id="contact" class="section-padding">
       <div class="container">
         <div class="section-header">
-          <span class="section-tag">COLLABORATION</span>
-          <h2 class="section-title">Let's Build Something Beautiful</h2>
+          <span class="section-tag" id="contact-tag">COLLABORATION</span>
+          <h2 class="section-title" id="contact-title">Let's Build Something Beautiful</h2>
         </div>
         
         <div class="contact-layout">
           <!-- Left info card (now centered and prominent) -->
           <div class="contact-info-card tactile-card">
-            <h3 class="card-subtitle">Direct Channels</h3>
-            <p>Have an upcoming game pipeline, architectural lookdev project, web configurator setup, or general freelance assignment? Let's connect and review details.</p>
+            <h3 class="card-subtitle" id="contact-subtitle">Direct Channels</h3>
+            <p id="contact-desc">Have an upcoming game pipeline, architectural lookdev project, web configurator setup, or general freelance assignment? Let's connect and review details.</p>
             
             <div class="contact-details">
               <div class="contact-node">
@@ -331,7 +342,7 @@
                 </div>
                 <div class="node-text">
                   <span class="node-lbl">Direct Mail</span>
-                  <a href="mailto:saxena12anany@outlook.com" class="node-val">saxena12anany@outlook.com</a>
+                  <a href="mailto:saxena12anany@outlook.com" class="node-val" id="contact-email">saxena12anany@outlook.com</a>
                 </div>
               </div>
               
@@ -343,7 +354,7 @@
                 </div>
                 <div class="node-text">
                   <span class="node-lbl">Direct Call</span>
-                  <a href="tel:+919001561133" class="node-val">+91 - 9001561133</a>
+                  <a href="tel:+919001561133" class="node-val" id="contact-phone">+91 - 9001561133</a>
                 </div>
               </div>
             </div>
@@ -356,9 +367,9 @@
                   <polyline points="7 10 12 15 17 10"></polyline>
                   <line x1="12" y1="15" x2="12" y2="3"></line>
                 </svg>
-                <h4>Download Resume</h4>
+                <h4 id="contact-resume-title">Download Resume</h4>
               </div>
-              <p>Access Anany Saxena's commercial background and specialized design suite certifications.</p>
+              <p id="contact-resume-desc">Access Anany Saxena's commercial background and specialized design suite certifications.</p>
               <a href="assets/Anany_Saxena_Resume.pdf" download="Anany_Saxena_Resume.pdf" class="tactile-btn pill-btn primary-gradient small-btn">
                 Download Resume (PDF)
               </a>

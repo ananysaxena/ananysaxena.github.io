@@ -1329,21 +1329,189 @@ html.light #main-footer {
   margin-top: auto;
 }
 
+
+/* ==========================================
+   12A. HERO REDESIGN & VERTICAL SKILLS LAYOUT
+   ========================================== */
+.hero-intro-card {
+  max-width: 650px;
+  margin: 0 auto 36px auto;
+  padding: 30px 40px;
+  border-radius: var(--border-radius-lg);
+  border: 1px solid var(--border-color);
+  background: rgba(255, 255, 255, 0.01);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: var(--shadow-inset);
+}
+
+html.light .hero-intro-card {
+  background: rgba(0, 0, 0, 0.005);
+}
+
+.hero-cta-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.hero-resume-btn {
+  padding: 16px 36px;
+  font-size: 1rem;
+  box-shadow: 0 10px 28px var(--accent-glow), var(--shadow-extruded);
+}
+
+.skills-split-layout {
+  display: grid;
+  grid-template-columns: 210px 1fr;
+  gap: 36px;
+  align-items: start;
+  margin-top: 20px;
+}
+
+.skills-tabs-vertical {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 10px;
+  border-radius: var(--border-radius-md);
+  box-shadow: var(--shadow-inset);
+  background: rgba(0, 0, 0, 0.01);
+  border: 1px solid var(--border-color);
+}
+
+html.light .skills-tabs-vertical {
+  background: rgba(0, 0, 0, 0.015);
+}
+
+.skills-tabs-vertical .tab-btn {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.88rem;
+  font-weight: 600;
+  padding: 14px 18px;
+  border: none;
+  background: transparent;
+  color: var(--text-muted);
+  cursor: pointer;
+  border-radius: var(--border-radius-sm);
+  outline: none;
+  text-align: left;
+  transition: var(--transition-tactile);
+}
+
+.skills-tabs-vertical .tab-btn .btn-dot {
+  width: 6px;
+  height: 6px;
+  background: var(--text-muted);
+  border-radius: var(--border-radius-circle);
+  transition: all 0.3s ease;
+}
+
+.skills-tabs-vertical .tab-btn.active {
+  color: var(--primary);
+  box-shadow: var(--shadow-extruded);
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+}
+
+.skills-tabs-vertical .tab-btn.active .btn-dot {
+  background: var(--primary);
+  box-shadow: 0 0 8px var(--accent-glow);
+}
+
+.skills-tabs-vertical .tab-btn:hover:not(.active) {
+  color: var(--primary);
+}
+
+.skills-tab-content-panel {
+  min-height: 250px;
+}
+
 /* ==========================================
    13. RESPONSIVE DESIGN (MEDIA QUERIES)
    ========================================== */
 
-/* Theme icons hidden by default */
-.sun-icon {
+/* Neumorphic Sliding Switch */
+.tactile-switch {
+  background: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  outline: none;
+  display: inline-flex;
+}
+
+.switch-track {
+  display: block;
+  width: 66px;
+  height: 32px;
+  border-radius: 50px;
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-inset);
+  position: relative;
+  transition: var(--transition-tactile);
+}
+
+.switch-thumb {
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 24px;
+  height: 24px;
+  border-radius: var(--border-radius-circle);
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-extruded);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1), background-color 0.3s ease;
+  color: var(--text-color);
+}
+
+/* Dark mode shifts the thumb to the right */
+html.dark .switch-thumb {
+  transform: translateX(34px);
+  box-shadow: var(--shadow-extruded);
+}
+
+.switch-thumb svg {
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* Hide/show sun/moon icons inside the sliding knob */
+html.light .moon-icon {
+  opacity: 0;
+  transform: rotate(-90deg) scale(0.5);
   display: none;
 }
 
 html.light .sun-icon {
+  opacity: 1;
+  transform: rotate(0) scale(1);
+  color: var(--primary);
   display: block;
 }
 
-html.light .moon-icon {
+html.dark .sun-icon {
+  opacity: 0;
+  transform: rotate(90deg) scale(0.5);
   display: none;
+}
+
+html.dark .moon-icon {
+  opacity: 1;
+  transform: rotate(0) scale(1);
+  color: var(--primary);
+  display: block;
 }
 
 /* Tablets (landscape) */
@@ -1387,6 +1555,19 @@ html.light .moon-icon {
   }
   .about-grid, .contact-layout {
     grid-template-columns: 1fr;
+  }
+  .skills-split-layout {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  .skills-tabs-vertical {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .skills-tabs-vertical .tab-btn {
+    flex: 1;
+    justify-content: center;
+    text-align: center;
   }
   .projects-grid {
     grid-template-columns: 1fr;

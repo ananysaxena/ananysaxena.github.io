@@ -1,0 +1,78 @@
+{
+  "hero": {
+    "greeting": "HI I AM",
+    "name": "ANANY SAXENA",
+    "description": "I'm a passionate 3D Generalist focused on game-ready topology, lookdev, and cinematic lighting. Skilled in high/low poly modeling, rigging, texturing, UV efficiency, and game environment art."
+  },
+  "about": {
+    "sectionTag": "ARTISTIC MIND",
+    "sectionTitle": "About & Creative Core",
+    "cardSubtitle": "Creative Perspective",
+    "paragraphs": [
+      "My passion lies in crafting highly detailed props, stylized and realistic characters, and immersive architectural spaces. I approach every mesh with a strong sense of composition, color theory, and visual storytelling—ensuring that every digital sculpt carries organic depth and emotional weight.",
+      "Bridging professional DCC suites (Blender, ZBrush, Maya) with industry-leading lookdev toolkits, I focus on delivering clean topology, optimal UV mapping, and high-fidelity PBR texturing. With over 3 years of 3D modeling and lighting exploration (including 1.8+ years of dedicated studio experience), I strive to create assets that are as technically efficient as they are visually arresting."
+    ],
+    "showreel": {
+      "title": "Interactive Showreel",
+      "description": "Experience my animations, industrial walkthroughs, and rendering configurations in motion.",
+      "url": "https://drive.google.com/file/d/1FtIFfOGeBTM0gDz9WLrN4D6fTmkMg2Mm/view?usp=sharing"
+    }
+  },
+  "skills": {
+    "cardSubtitle": "Artistic Toolkit",
+    "categories": {
+      "technical": {
+        "title": "Technical Skills",
+        "items": [
+          "High & Low Poly Modeling",
+          "Digital Sculpting (ZBrush, Blender)",
+          "Rigging & Skinning",
+          "UV Mapping & Efficient Unwrapping",
+          "PBR & Hand-Painted Texturing",
+          "Retopology & Normal Map Baking",
+          "Real-time Web 3D (Three.js/GLB)",
+          "Photogrammetry & Asset Scan Cleanups",
+          "Basic Shader & Lookdev Setup"
+        ]
+      },
+      "creative": {
+        "title": "Fundamental Skills",
+        "items": [
+          "Composition & Cinematic Scene Design",
+          "Stylized & Photorealistic Art Styles",
+          "Color Harmonies & Lighting Theory",
+          "Detailed Prop Design & Storytelling",
+          "Industrial & Environmental Art",
+          "Concept Visualisation"
+        ]
+      },
+      "tools": {
+        "title": "DCC Software",
+        "items": [
+          "Blender (Core Modeling & Rendering)",
+          "ZBrush (High-Res Sculpting)",
+          "Maya (Industry Standard Pipelines)",
+          "Substance Painter (Detailed Texturing)",
+          "Substance Designer (Material Creation)",
+          "Marmoset Toolbag (Lookdev & Baking)",
+          "Unreal Engine 5 (Real-time Environments)",
+          "Unity (PBR Game Pipeline Integration)",
+          "Twinmotion & Twinmotion / CC4",
+          "DaVinci Resolve (Color Grading & Editing)"
+        ]
+      }
+    }
+  },
+  "contact": {
+    "sectionTag": "COLLABORATION",
+    "sectionTitle": "Let's Build Something Beautiful",
+    "cardSubtitle": "Direct Channels",
+    "description": "Have an upcoming game pipeline, architectural lookdev project, web configurator setup, or general freelance assignment? Let's connect and review details.",
+    "email": "saxena12anany@outlook.com",
+    "phone": "+91 - 9001561133",
+    "resume": {
+      "title": "Download Resume",
+      "description": "Access Anany Saxena's commercial background and specialized design suite certifications."
+    }
+  }
+}

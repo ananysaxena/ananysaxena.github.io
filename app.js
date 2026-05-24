@@ -39,25 +39,129 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // ==========================================
-  // 2. INTERACTIVE ABOUT/SKILLS TABS
+  // 2. DYNAMIC COPY & SKILLS ENGINE (content.json)
   // ==========================================
-  const tabButtons = document.querySelectorAll('.tab-btn');
-  const tabContents = document.querySelectorAll('.tab-content');
-  
-  tabButtons.forEach(btn => {
-    btn.addEventListener('click', () => {
-      const targetTab = btn.getAttribute('data-tab');
+  async function loadCopyAndSkills() {
+    try {
+      const response = await fetch('content.json');
+      if (!response.ok) throw new Error('Failed to fetch copy config');
+      const content = await response.json();
       
-      tabButtons.forEach(b => b.classList.remove('active'));
-      tabContents.forEach(c => c.classList.remove('active'));
+      // Inject Hero copy
+      const heroGreeting = document.getElementById('hero-greeting');
+      const heroName = document.getElementById('hero-name');
+      const heroDesc = document.getElementById('hero-desc');
+      if (heroGreeting) heroGreeting.innerText = content.hero.greeting;
+      if (heroName) heroName.innerText = content.hero.name;
+      if (heroDesc) heroDesc.innerText = content.hero.description;
       
-      btn.classList.add('active');
-      const activeContent = document.getElementById(`tab-${targetTab}`);
-      if (activeContent) {
-        activeContent.classList.add('active');
+      // Inject About copy
+      const aboutTag = document.getElementById('about-tag');
+      const aboutTitle = document.getElementById('about-title');
+      const aboutSubtitle = document.getElementById('about-subtitle');
+      const aboutParasContainer = document.getElementById('about-paragraphs');
+      const showreelTitle = document.getElementById('showreel-title');
+      const showreelDesc = document.getElementById('showreel-desc');
+      const showreelUrl = document.getElementById('showreel-url');
+      
+      if (aboutTag) aboutTag.innerText = content.about.sectionTag;
+      if (aboutTitle) aboutTitle.innerText = content.about.sectionTitle;
+      if (aboutSubtitle) aboutSubtitle.innerText = content.about.cardSubtitle;
+      if (aboutParasContainer) {
+        aboutParasContainer.innerHTML = '';
+        content.about.paragraphs.forEach(para => {
+          const p = document.createElement('p');
+          p.innerText = para;
+          aboutParasContainer.appendChild(p);
+        });
       }
+      if (showreelTitle) showreelTitle.innerText = content.about.showreel.title;
+      if (showreelDesc) showreelDesc.innerText = content.about.showreel.description;
+      if (showreelUrl) showreelUrl.setAttribute('href', content.about.showreel.url);
+      
+      // Inject Skills copy
+      const skillsTitle = document.getElementById('skills-title');
+      const tabLabelTech = document.getElementById('tab-label-technical');
+      const tabLabelCreative = document.getElementById('tab-label-creative');
+      const tabLabelTools = document.getElementById('tab-label-tools');
+      
+      if (skillsTitle) skillsTitle.innerText = content.skills.cardSubtitle;
+      if (tabLabelTech) tabLabelTech.innerText = content.skills.categories.technical.title;
+      if (tabLabelCreative) tabLabelCreative.innerText = content.skills.categories.creative.title;
+      if (tabLabelTools) tabLabelTools.innerText = content.skills.categories.tools.title;
+      
+      // Inject Skill grid items
+      renderSkillList('grid-technical', content.skills.categories.technical.items);
+      renderSkillList('grid-creative', content.skills.categories.creative.items);
+      renderSkillList('grid-tools', content.skills.categories.tools.items);
+      
+      // Inject Contact details
+      const contactTag = document.getElementById('contact-tag');
+      const contactTitle = document.getElementById('contact-title');
+      const contactSubtitle = document.getElementById('contact-subtitle');
+      const contactDesc = document.getElementById('contact-desc');
+      const contactEmail = document.getElementById('contact-email');
+      const contactPhone = document.getElementById('contact-phone');
+      const contactResumeTitle = document.getElementById('contact-resume-title');
+      const contactResumeDesc = document.getElementById('contact-resume-desc');
+      
+      if (contactTag) contactTag.innerText = content.contact.sectionTag;
+      if (contactTitle) contactTitle.innerText = content.contact.sectionTitle;
+      if (contactSubtitle) contactSubtitle.innerText = content.contact.cardSubtitle;
+      if (contactDesc) contactDesc.innerText = content.contact.description;
+      if (contactEmail) {
+        contactEmail.innerText = content.contact.email;
+        contactEmail.setAttribute('href', `mailto:${content.contact.email}`);
+      }
+      if (contactPhone) {
+        contactPhone.innerText = content.contact.phone;
+        contactPhone.setAttribute('href', `tel:${content.contact.phone.replace(/[\s-]/g, '')}`);
+      }
+      if (contactResumeTitle) contactResumeTitle.innerText = content.contact.resume.title;
+      if (contactResumeDesc) contactResumeDesc.innerText = content.contact.resume.description;
+      
+      // Setup dynamic tab button listeners once layout is active
+      setupTabListeners();
+      
+    } catch (err) {
+      console.error('Error loading static copy dynamic database content:', err);
+    }
+  }
+  
+  function renderSkillList(gridId, items) {
+    const grid = document.getElementById(gridId);
+    if (!grid) return;
+    grid.innerHTML = '';
+    items.forEach(item => {
+      const pill = document.createElement('div');
+      pill.className = 'skill-pill tactile-inset';
+      pill.innerHTML = `<span class="bullet"></span>${item}`;
+      grid.appendChild(pill);
     });
-  });
+  }
+
+  function setupTabListeners() {
+    const tabButtons = document.querySelectorAll('.tab-btn');
+    const tabContents = document.querySelectorAll('.tab-content');
+    
+    tabButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const targetTab = btn.getAttribute('data-tab');
+        
+        tabButtons.forEach(b => b.classList.remove('active'));
+        tabContents.forEach(c => c.classList.remove('active'));
+        
+        btn.classList.add('active');
+        const activeContent = document.getElementById(`tab-${targetTab}`);
+        if (activeContent) {
+          activeContent.classList.add('active');
+        }
+      });
+    });
+  }
+
+  // Run dynamic copy loading
+  loadCopyAndSkills();
 
   // ==========================================
   // 3. DYNAMIC DATABASE PROJECTS LOADER & VIEW CLICKS
